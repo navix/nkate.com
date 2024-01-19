@@ -8,8 +8,9 @@ import Card from '../components/Card.astro';
 		<h1>nkate</h1>
 		<ul>
       <li><a href="https://twitch.com/nkate" target="_blank"><b>Стріми:</b> twitch/nkate</a></li>
-      <li><a href="https://pekarka.com" target="_blank"><b>Cookies:</b> perakra.com</a></li>
+      <li><a href="https://pekarka.com" target="_blank"><b>Cookies:</b> pekarka.com</a></li>
     </ul>
+    <div class="made">Made in Ukraine 🇺🇦</div>
 	</main>
 </Layout>
 
@@ -20,22 +21,24 @@ import Card from '../components/Card.astro';
 		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
-		font-size: 20px;
+    font-size: .9rem;
 		line-height: 1.6;
 	}
 	h1 {
 		font-size: 1.2rem;
 		font-weight: 700;
 		line-height: 1;
-		margin-bottom: 1em;
+		margin-bottom: 1.5rem;
 	}
 	ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    font-size: .9rem;
     a {
       color: #eee;
     }
+  }
+  .made {
+      color: #aaa;
+      margin-top: 1rem;
   }
 </style>
