@@ -1,0 +1,56 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,400;0,600;0,800;1,200;1,300;1,600&amp;display=swap"
+      rel="stylesheet"
+    />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+    font-family: 'Inter', Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+		background: #13151a;
+    background-size: cover;
+    background-color:hsla(272,81%,2%,1);
+    background-image:
+            radial-gradient(at 30% 5%, hsla(195,90%,17%,1) 0px, transparent 50%),
+            radial-gradient(at 19% 29%, hsla(352,81%,26%,1) 0px, transparent 50%),
+            radial-gradient(at 19% 6%, hsla(355,87%,8%,1) 0px, transparent 50%),
+            radial-gradient(at 92% 75%, hsla(240,51%,32%,1) 0px, transparent 50%),
+            radial-gradient(at 59% 44%, hsla(0,33%,0%,1) 0px, transparent 50%),
+            radial-gradient(at 17% 45%, hsla(340,87%,13%,1) 0px, transparent 50%),
+            radial-gradient(at 26% 49%, hsla(266,68%,26%,1) 0px, transparent 50%);
+    min-width: 100vw;
+    min-height: 100vh;
+	}
+</style>
