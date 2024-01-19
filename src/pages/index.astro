@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const year = new Date().getFullYear();
 ---
 
 <Layout title="nkate">
@@ -10,7 +12,7 @@ import Card from '../components/Card.astro';
       <li><a href="https://twitch.com/nkate" target="_blank"><b>Стріми:</b> twitch/nkate</a></li>
       <li><a href="https://pekarka.com" target="_blank"><b>Cookies:</b> pekarka.com</a></li>
     </ul>
-    <div class="made">Made in Ukraine 🇺🇦</div>
+    <div class="made">🇺🇦 Ukraine {year}</div>
 	</main>
 </Layout>
 
